@@ -1,11 +1,11 @@
-const VenueLabel = () => {
+const VenueLabel = ({ venueList }: { venueList: number[] }) => {
   return (
-    <div className="h-10 border-x border-b flex justify-center items-center pl-[150px]">
-      {[1, 2, 3, 4].map((item, index) => {
+    <div className="h-10 border-x border-b border-gray-200 flex justify-center items-center pl-[150px]">
+      {venueList.map((item, index) => {
         return (
           <div
             key={index}
-            className={`h-full w-full flex-1 border-r flex justify-center items-center ${
+            className={`h-full w-full flex-1 border-r border-gray-200 flex justify-center items-center ${
               item == 1 && "border-l"
             }`}
           >
